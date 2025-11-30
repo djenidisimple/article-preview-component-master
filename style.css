@@ -172,20 +172,59 @@ img {
         position: relative;
     }
     .card {
-        width: 670px;
-        height: auto;
+        width: 590px;
+        height: 200px;
         display: flex;
+        box-sizing: border-box;
+    }
+    .card-head {
+        height: 200px;
     }
     .first-part {
-        width: 36%;
+        width: 38%;
+        height: 200px;
     }
     .second-part {
-        width: 64%;
+        width: 62%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 34px;
+        padding-right: 34px;
+        box-sizing: border-box;
     }
     .card-head > img {
         width: 100%;
-        height: auto;
+        height: 200px;
         border-radius: 0;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    .card-content {
+        padding: 0;
+    }
+    .card-footer {
+        padding: 0;
+        margin: 0;
+    }
+    .card-footer {
+        width: 100%;
+    }
+    .avatar {
+        width: 28px;
+        height: 28px;
+    }
+    .flex-col {
+        justify-content: center;
+    }
+    h1 {
+        font-size: 15.8px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 10px;
     }
     .share {
         position: absolute;
