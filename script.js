@@ -8,12 +8,16 @@ btnShare.addEventListener("click", function () {
     btnShare.style.backgroundImage = 'var(--icon-share-2)';
 });
 
-// btnShare.addEventListener("dblclick", function () {
-//     share.style.display = "none";
-//     btnShare.style.backgroundColor = 'var(--light-grayish-blue)';
-//     btnShare.style.backgroundImage = 'var(--icon-share)';
-// })
+document.addEventListener("click", function (e) {
+    if (e.target !== btnShare && e.target !== share) {
+        share.style.display = "none";
+        btnShare.style.backgroundColor = 'var(--light-grayish-blue)';
+        btnShare.style.backgroundImage = 'var(--icon-share)';
+    }
+});
 
 btnShare2.addEventListener("click", function () {
-    share.style.display = 'none'
+    share.style.display = 'none';
+    btnShare.style.backgroundColor = 'var(--light-grayish-blue)';
+    btnShare.style.backgroundImage = 'var(--icon-share)';
 });

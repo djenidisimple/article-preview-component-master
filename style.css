@@ -95,13 +95,14 @@ body {
     background-color: var(--light-grayish-blue);
     border-radius: 100%;
     box-sizing: border-box;
+    z-index: 2;
 }
 .btn-share-2 {
     cursor: pointer;
     width: 30px;
     height: 30px;
     border: none;
-    background: url(./images/icon-share-2.png) center no-repeat;
+    background: var(--icon-share-2) center no-repeat;
     background-color: var(--Desaturated-dark-blue);
     border-radius: 100%;
     box-sizing: border-box;
@@ -110,14 +111,14 @@ body {
     z-index: 2;
 }
 .share {
-    width: 100%;
     position: absolute;
+    width: 100%;
     left: 0;
     bottom: 0;
     display: none;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 18px;
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;
@@ -163,10 +164,13 @@ img {
     height: 40px;
     border-radius: 50px;
 }
-.relative {
-    position: relative;
-}
 @media screen and (min-width: 1024px) {
+    .btn-share-2 {
+        display: none;
+    }
+    .md-relative {
+        position: relative;
+    }
     .card {
         width: 670px;
         height: auto;
