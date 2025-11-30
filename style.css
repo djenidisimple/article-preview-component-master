@@ -1,0 +1,214 @@
+:root {
+    --Very-dark-grayish-blue: #48556a;
+    --Desaturated-dark-blue: #6d7f97;
+    --Grayish-blue: #9eafc2;
+    --light-grayish-blue: #ecf2f8;
+
+    --dim-grey: #686E75ff;
+    --slate-grey: #757987ff;
+    --walnut: #6B451Cff;
+    --blue-slate: #656D76ff;
+    --white: #FFFFFFff;
+    --alice-blue: #E0E6ECff;
+    --white-2: #FFFFFFff;
+    --alice-blue-2: #EAF0F6ff;
+    --silver: #BFC2C5ff;
+    --alabaster-grey: #DADBDAff;
+    --evergreen: #163A2Eff;
+
+    --icon-share: url(./images/icon-share.svg);
+    --icon-share-2: url(./images/icon-share-2.png);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@font-face {
+    font-family: Manrope;
+    src: url('./src/Manrope-VariableFont_wght.ttf');
+}
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    background-color: var(--light-grayish-blue);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: Manrope;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.card {
+    width: 322px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: white;
+}
+.card-head img {
+    height: 210px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.card-content {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.card-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+.margin-none {
+    margin: 0;
+}
+.flex-start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.btn-share {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--icon-share) center no-repeat;
+    background-size: 55%;
+    background-color: var(--light-grayish-blue);
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+.btn-share-2 {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url(./images/icon-share-2.png) center no-repeat;
+    background-color: var(--Desaturated-dark-blue);
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+.z-index-2 {
+    z-index: 2;
+}
+.share {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 1;
+    background-color: var(--Very-dark-grayish-blue);
+}
+.share > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.share > span {
+    text-transform: uppercase;
+    color: var(--silver);
+    letter-spacing: 4px;
+}
+.icon-share {
+    width: 4px;
+    height: 4px;
+}
+.share img {
+    width: 20px;
+    height: 20px;
+}
+h1 {
+    font-size: 16px;
+}
+h2 {
+    font-size: 14px;
+}
+p {
+    color: var(--slate-grey);
+    font-weight: 700;
+}
+img {
+    width: 100%;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.relative {
+    position: relative;
+}
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 670px;
+        height: auto;
+        display: flex;
+    }
+    .first-part {
+        width: 36%;
+    }
+    .second-part {
+        width: 64%;
+    }
+    .card-head > img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+    .share {
+        position: absolute;
+        width: 200px;
+        height: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        gap: 20px;
+        top: -70px;
+        left: -85px;
+        padding: 24px;
+    }
+    .share > span {
+        font-size: 11px;
+    }
+    .share img {
+        width: 16px;
+        height: 16px;
+    }
+    .share::after {
+        content: "";
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid var(--Very-dark-grayish-blue);
+        bottom: -10px;
+    }
+}
